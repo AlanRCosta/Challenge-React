@@ -1,5 +1,12 @@
+import GlobalStyle from "./styles/GlobalStyle";
+
 function App(): JSX.Element {
-  return <h1>Alan Costa</h1>;
+  return (
+    <>
+      <GlobalStyle />
+      <h1>Alan Costa</h1>
+    </>
+  );
 }
 
 export default App;
