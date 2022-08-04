@@ -1,11 +1,14 @@
+import { BrowserRouter } from "react-router-dom";
+
 import GlobalStyle from "./styles/GlobalStyle";
+import Routes from "./routes";
 
 function App(): JSX.Element {
   return (
-    <>
+    <BrowserRouter>
       <GlobalStyle />
-      <h1>Alan Costa</h1>
-    </>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
