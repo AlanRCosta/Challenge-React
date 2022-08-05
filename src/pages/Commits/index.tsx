@@ -1,5 +1,5 @@
 const Commits: React.FC = () => {
-  return <h1>Alan Costa</h1>;
+  return <div></div>;
 };
 
 export default Commits;
