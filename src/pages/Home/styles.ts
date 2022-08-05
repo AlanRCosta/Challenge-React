@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 16px 24px;
+  overflow: hidden;
 `;
 
 export const Main = styled.div`
@@ -24,5 +25,26 @@ export const UserInformation = styled.div`
 export const RepoInformation = styled.div`
   @media (min-width: 768px) {
     width: 75%;
+  }
+`;
+
+export const Repos = styled.div`
+  margin-top: 16px;
+
+  h2 {
+    font-size: 16px;
+    font-weight: normal;
+  }
+`;
+
+export const Item = styled.div`
+  margin-top: 8px;
+
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
   }
 `;

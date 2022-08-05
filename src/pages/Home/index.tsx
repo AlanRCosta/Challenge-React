@@ -1,4 +1,13 @@
-import { Container, Main, UserInformation, RepoInformation } from "./styles";
+import {
+  Container,
+  Main,
+  UserInformation,
+  RepoInformation,
+  Repos,
+  Item,
+} from "./styles";
+
+import RepoData from "../../components/RepoData";
 import UserData from "../../components/UserData";
 
 const Home: React.FC = () => {
@@ -16,7 +25,21 @@ const Home: React.FC = () => {
           />
         </UserInformation>
 
-        <RepoInformation></RepoInformation>
+        <RepoInformation>
+          <Repos>
+            <h2>Repositories</h2>
+            <Item>
+              {[1, 2, 3, 4, 5, 6].map((n) => (
+                <RepoData
+                  key={n}
+                  username={"alanrcosta"}
+                  reponame={"Calculadora"}
+                  description={"Trainee Challenge"}
+                />
+              ))}
+            </Item>
+          </Repos>
+        </RepoInformation>
       </Main>
     </Container>
   );
