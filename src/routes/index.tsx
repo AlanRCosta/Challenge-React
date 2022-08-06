@@ -6,8 +6,9 @@ import Commits from "../pages/Commits";
 const Routes = (): JSX.Element => (
   <RoutesRRD>
     <Route index element={<Home />} />
-    <Route path="/:username" element={<Home />} />
-    <Route path="/:username/:reponame/commits" element={<Commits />} />
+    <Route path="/users/:username" element={<Home />} />
+    <Route path="/users/:username/:reponame" element={<Home />} />
+    <Route path="/repos/:username/:reponame/commits" element={<Commits />} />
   </RoutesRRD>
 );
 

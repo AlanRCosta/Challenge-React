@@ -17,12 +17,16 @@ export const Main = styled.div`
 `;
 
 export const UserInformation = styled.div`
+  padding: 0 16px;
+
   @media (min-width: 768px) {
     width: 25%;
   }
 `;
 
 export const RepoInformation = styled.div`
+  padding: 0 16px;
+
   @media (min-width: 768px) {
     width: 75%;
   }
@@ -37,7 +41,7 @@ export const Repos = styled.div`
   }
 `;
 
-export const Item = styled.div`
+export const Repo = styled.div`
   margin-top: 8px;
 
   display: grid;

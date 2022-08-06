@@ -1,47 +1,64 @@
-import {
-  Container,
-  Main,
-  UserInformation,
-  RepoInformation,
-  Repos,
-  Item,
-} from "./styles";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
+import { TApiRepo, TApiUser } from "../../@types";
+
+import * as s from "./styles";
 import RepoData from "../../components/RepoData";
 import UserData from "../../components/UserData";
+import { Api } from "../../services/api";
 
 const Home: React.FC = () => {
-  return (
-    <Container>
-      <Main>
-        <UserInformation>
-          <UserData
-            username={"alanrcosta"}
-            name={"Alan Costa"}
-            avatarUrl={"https://avatars.githubusercontent.com/u/65302810?v=4"}
-            followers={10}
-            following={9}
-            location={"Rio de Janeiro, Brazil"}
-          />
-        </UserInformation>
+  const { username = "alanrcosta" } = useParams();
+  const [user, setUser] = useState<TApiUser>();
+  const [repos, setRepos] = useState<TApiRepo[]>();
 
-        <RepoInformation>
-          <Repos>
+  useEffect(() => {
+    Api.get(`/users/${username}`).then((response) => {
+      setUser(response.data);
+    });
+
+    Api.get(`/users/${username}/repos`)
+
+      .then((response) => {
+        setRepos(response.data);
+      })
+      .catch((err) => {
+        console.log("Erro: ", err);
+      });
+  }, [username]);
+
+  return (
+    <s.Container>
+      <s.Main>
+        <s.UserInformation>
+          <UserData
+            username={user?.login}
+            name={user?.name}
+            avatarUrl={user?.avatar_url}
+            followers={user?.followers}
+            following={user?.following}
+            location={user?.location}
+          />
+        </s.UserInformation>
+
+        <s.RepoInformation>
+          <s.Repos>
             <h2>Repositories</h2>
-            <Item>
-              {[1, 2, 3, 4, 5, 6].map((n) => (
+            <s.Repo>
+              {repos?.map((item) => (
                 <RepoData
-                  key={n}
-                  username={"alanrcosta"}
-                  reponame={"Calculadora"}
-                  description={"Trainee Challenge"}
+                  key={item.name}
+                  username={item.owner.login}
+                  reponame={item.name}
+                  description={item.description}
                 />
               ))}
-            </Item>
-          </Repos>
-        </RepoInformation>
-      </Main>
-    </Container>
+            </s.Repo>
+          </s.Repos>
+        </s.RepoInformation>
+      </s.Main>
+    </s.Container>
   );
 };
 
