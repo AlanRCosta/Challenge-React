@@ -41,7 +41,7 @@ const Commits: React.FC = () => {
       />
       {commitFiltered
         ?.map((item) => (
-          <CommitData key={item.commit.message} message={item.commit.message} />
+          <CommitData key={item.sha} message={item.commit.message} />
         ))
         .slice(0, 10)}
     </s.Container>

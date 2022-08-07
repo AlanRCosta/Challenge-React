@@ -8,6 +8,7 @@ export type TApiUser = {
 };
 
 export type TApiRepo = {
+  id: number;
   name: string;
   owner: {
     login: string;
@@ -16,6 +17,7 @@ export type TApiRepo = {
 };
 
 export type TApiCommit = {
+  sha: string;
   commit: {
     message: string;
   };

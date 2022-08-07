@@ -48,7 +48,7 @@ const Home: React.FC = () => {
             <s.Repo>
               {repos?.map((item) => (
                 <RepoData
-                  key={item.name}
+                  key={item.id}
                   username={item.owner.login}
                   reponame={item.name}
                   description={item.description}
