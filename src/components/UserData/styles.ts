@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  box-shadow: 5px 5px 5px 0px #41d3be;
+`;
 
 export const Flex = styled.div`
   display: flex;
@@ -36,6 +38,7 @@ export const Flex = styled.div`
 export const Avatar = styled.img`
   width: 16%;
   border-radius: 50%;
+  padding: 10px;
 
   @media (min-width: 768px) {
     width: 100%;
@@ -68,5 +71,6 @@ export const Location = styled.div`
   span {
     display: flex;
     font-size: 14px;
+    padding-bottom: 10px;
   }
 `;

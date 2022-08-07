@@ -5,6 +5,7 @@ export const Container = styled.div`
   align-items: center;
   background: #41d3be;
   padding: 10px 16px;
+  box-shadow: 0px 5px 5px 0px #a9a9a9;
 `;
 
 export const SearchForm = styled.form`

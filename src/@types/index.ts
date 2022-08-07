@@ -14,3 +14,9 @@ export type TApiRepo = {
   };
   description?: string;
 };
+
+export type TApiCommit = {
+  commit: {
+    message: string;
+  };
+};

@@ -11,7 +11,7 @@ const RepoData: React.FC<TRepoProps> = ({
   return (
     <Container>
       <header>
-        <Link to={`/${username}/${reponame}/commits`}>{reponame}</Link>
+        <Link to={`/repos/${username}/${reponame}/commits`}>{reponame}</Link>
       </header>
       <p>{description}</p>
     </Container>
