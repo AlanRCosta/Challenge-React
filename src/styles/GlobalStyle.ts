@@ -34,6 +34,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+
 }
 
 ol, ul {
@@ -58,5 +59,12 @@ table {
 * {
   box-sizing: border-box;
 	font-family: Montserrat;
+}
+
+:root {
+	--headerColor: #41d3be;
+	--headerShaddow: #a9a9a9;
+	--componentColor: #f0ffff;
+	--componentShaddow: #41d3be;
 }
 `;

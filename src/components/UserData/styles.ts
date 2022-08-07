@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  box-shadow: 5px 5px 5px 0px #41d3be;
+  box-shadow: 5px 5px 5px 0px var(--componentShaddow);
+  background-color: var(--componentColor);
 `;
 
 export const Flex = styled.div`
