@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { TApiRepo, TApiUser } from "../../@types";
+import { Api } from "../../services/api";
 
 import * as s from "./styles";
 import RepoData from "../../components/RepoData";
 import UserData from "../../components/UserData";
-import { Api } from "../../services/api";
 
 const Home: React.FC = () => {
   const { username = "alanrcosta" } = useParams();
