@@ -16,7 +16,7 @@
 
 :heavy_check_mark: Show data to any user on GitHub and its repositories, through a search in a text field
 
-:heavy_check_mark: Mostrar os últimos 10 commits de um repositório
+:heavy_check_mark: Show the last 10 commits of a repository
 
 :heavy_check_mark: Filter commits by name
 
