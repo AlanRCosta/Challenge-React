@@ -25,6 +25,7 @@ const Home: React.FC = () => {
       })
       .catch((err) => {
         console.log("Erro: ", err);
+        return alert("User not found");
       });
   }, [username]);
 
