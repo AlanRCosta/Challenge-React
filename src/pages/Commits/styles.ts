@@ -11,3 +11,10 @@ export const RepoName = styled.h1`
   font-size: 20px;
   margin: 20px;
 `;
+
+export const FilterInput = styled.input`
+  outline: 0;
+  border-radius: 6px;
+  padding: 6px 12px;
+  width: 40%;
+`;
